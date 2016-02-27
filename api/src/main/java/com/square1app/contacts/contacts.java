@@ -2,8 +2,10 @@ package com.square1app.contacts;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiNamespace;
-import com.square1app.contacts.adduse.card;
-import com.square1app.contacts.getuse.Iusername;
+import com.square1app.contacts.Objects.card;
+import com.square1app.contacts.Objects.qr;
+import com.square1app.contacts.Objects.username;
+
 
 import java.lang.Override;
 import java.lang.String;
@@ -16,42 +18,25 @@ import javax.inject.Named;
     namespace = @ApiNamespace(ownerDomain = "square1app.com", ownerName = "Square 1", packagePath = "com.square1app.contacts")
 )
 class contacts implements Icontacts {
-  @Override
-  public Iusername username(@Named("ownerid") String ownerid) {
-    return new com.square1app.contacts.getuse.username(ownerid);
-  }
 
-  @Override
-  public Iusername username(@Named( = "ownerid") String ownerid) {
+
+  public Iusername getUsername(@Named("ownerid") String ownerid) {
     return new username(ownerid);
   }
 
-  @Override
-  public Icard card(@Named( = "ownerid") String ownerid) {
+
+  public Icard getCard(@Named("ownerid") String ownerid) {
     return new card(ownerid);
   }
 
-  @Override
-  public Icard card(@Named( = "ownerid") String ownerid) {
-    return new card(ownerid);
-  }
-
-  @Override
-  public Iqr qr(@Named( = "ownerid") String ownerid) {
+  public Iqr getQr(@Named("ownerid") String ownerid) {
     return new qr(ownerid);
   }
 
-  @Override
-  public Iqr qr(@Named( = "ownerid") String ownerid) {
-    return new qr(ownerid);
-  }
-
-  @Override
-  public IsetUser setUser(@Named( = "userid") String userid) {
+  public IsetUser setUser(@Named("userid") String userid) {
     return new setUser(userid);
   }
 
-  @Override
   public Ilist list() {
     return list();
   }

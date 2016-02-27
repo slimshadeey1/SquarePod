@@ -9,11 +9,10 @@ class checkUser implements IcheckUser {
   checkUser(String username) {
     this.username = username;}
 
-  @Override
-  String getusername() {
+  public String getusername() {
     return this.username;}
 
-  @Override
-  void setusername(String username) {
+
+  public void setusername(String username) {
     this.username = username;}
 }

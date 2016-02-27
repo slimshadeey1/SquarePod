@@ -11,17 +11,17 @@ import java.lang.Override;
     namespace = @ApiNamespace(ownerDomain = "Square1app.com", ownerName = "Square 1", packagePath = "com.Square1app.blocks")
 )
 class blocks implements Iblocks {
-  @Override
+
   public Iblock block() {
     return block();
   }
 
-  @Override
+
   public Iunblock unblock() {
     return unblock();
   }
 
-  @Override
+
   public Ilist list() {
     return list();
   }

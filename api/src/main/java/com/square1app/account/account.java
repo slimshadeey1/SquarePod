@@ -13,27 +13,23 @@ import javax.inject.Named;
     namespace = @ApiNamespace(ownerDomain = "Square1app.com", ownerName = "Square 1", packagePath = "com.Square1app.account")
 )
 class account implements Iaccount {
-  @Override
+
   public IregisterUser registerUser() {
     return registerUser();
   }
 
-  @Override
-  public IverifyUser verifyUser(@Named( = "username") String username) {
+  public IverifyUser verifyUser(@Named("username") String username) {
     return new verifyUser(username);
   }
 
-  @Override
-  public IcheckUser checkUser(@Named( = "username") String username) {
+  public IcheckUser checkUser(@Named("username") String username) {
     return new checkUser(username);
   }
 
-  @Override
-  public IresetUser resetUser(@Named( = "username") String username) {
+  public IresetUser resetUser(@Named("username") String username) {
     return new resetUser(username);
   }
 
-  @Override
   public IremoveUser removeUser() {
     return removeUser();
   }

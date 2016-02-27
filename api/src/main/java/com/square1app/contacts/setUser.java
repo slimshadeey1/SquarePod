@@ -1,6 +1,5 @@
 package com.square1app.contacts;
 
-import java.lang.Override;
 import java.lang.String;
 
 class setUser implements IsetUser {
