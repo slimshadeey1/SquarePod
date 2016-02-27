@@ -1,18 +1,17 @@
 package com.square1app.account;
 
-import java.lang.Override;
-import java.lang.String;
-
 class checkUser implements IcheckUser {
-  private String username;
+    private String ownerid;
 
-  checkUser(String username) {
-    this.username = username;}
+    public checkUser(String ownerid) {
+        this.ownerid = ownerid;
+    }
 
-  public String getusername() {
-    return this.username;}
+    @Override public String getOwnerid() {
+        return ownerid;
+    }
 
-
-  public void setusername(String username) {
-    this.username = username;}
+    @Override public void setOwnerid(String ownerid) {
+        this.ownerid = ownerid;
+    }
 }

@@ -6,38 +6,34 @@ import com.square1app.contacts.Objects.card;
 import com.square1app.contacts.Objects.qr;
 import com.square1app.contacts.Objects.username;
 
-
-import java.lang.Override;
-import java.lang.String;
 import javax.inject.Named;
 
 @Api(
     name = "contacts",
     version = "v1",
     description = "Square 1 API",
-    namespace = @ApiNamespace(ownerDomain = "square1app.com", ownerName = "Square 1", packagePath = "com.square1app.contacts")
-)
+    namespace = @ApiNamespace(ownerDomain = "square1app.com", ownerName = "Square 1", packagePath = "com.square1app"))
 class contacts implements Icontacts {
 
 
-  public Iusername getUsername(@Named("ownerid") String ownerid) {
-    return new username(ownerid);
-  }
+    @Override public Iusername getUsername(@Named("ownerid")String ownerid,@Named("token") String token) {
+        return new username(ownerid);
+    }
 
 
-  public Icard getCard(@Named("ownerid") String ownerid) {
-    return new card(ownerid);
-  }
+    @Override public Icard getCard(@Named("ownerid")String ownerid,@Named("token") String token) {
+        return new card(ownerid);
+    }
 
-  public Iqr getQr(@Named("ownerid") String ownerid) {
-    return new qr(ownerid);
-  }
+    @Override public Iqr getQr(@Named("ownerid") String ownerid,@Named("token") String token) {
+        return new qr(ownerid);
+    }
 
-  public IsetUser setUser(@Named("userid") String userid) {
-    return new setUser(userid);
-  }
+    @Override public IsetUser setUser(@Named("userid") String userid,@Named("token") String token,@Named("user") String user) {
+        return new setUser(userid, user);
+    }
 
-  public Ilist list() {
-    return list();
-  }
+    @Override public Ilist list(@Named("ownerid") String ownerid,@Named("token") String token) {
+        return new userlist(ownerid);
+    }
 }

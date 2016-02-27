@@ -1,9 +1,14 @@
 package com.square1app.contacts;
 
-import java.lang.String;
+/**
+ * Created by benbyers on 2/27/16.
+ */
+public interface IsetUser {
+    String getUserid();
 
-interface IsetUser {
-  String getuserid();
+    void setUserid(String userid);
 
-  void setuserid(String userid);
+    String[] getVcards();
+
+    void setVcards(String[] vcards);
 }

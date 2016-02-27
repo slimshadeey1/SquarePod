@@ -4,7 +4,7 @@
         <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
         <init-param>
             <param-name>services</param-name>
-            <param-value>com.square1app.account.account</param-value>
+            <param-value>com.square1app.account.account,com.square1app.blocks.blocks,com.square1app.contacts.contacts,com.square1app.reports.reports,com.square1app.requests.requests</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

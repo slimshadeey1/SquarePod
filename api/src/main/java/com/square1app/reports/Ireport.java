@@ -1,9 +1,18 @@
 package com.square1app.reports;
 
-import java.lang.String;
+/**
+ * Created by benbyers on 2/27/16.
+ */
+public interface Ireport {
+    String getOwnerid();
 
-interface Ireport {
-  String getuserid();
+    void setOwnerid(String ownerid);
 
-  void setuserid(String userid);
+    String getDate();
+
+    void setDate(String date);
+
+    String getTargetid();
+
+    void setTargetid(String targetid);
 }

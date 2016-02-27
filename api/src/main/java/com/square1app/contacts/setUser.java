@@ -1,16 +1,28 @@
 package com.square1app.contacts;
 
-import java.lang.String;
-
 class setUser implements IsetUser {
-  private String userid;
+    private String userid;
+    private String[] vcards;
+    private String user;
 
-  setUser(String userid) {
-    this.userid = userid;}
+    setUser(String userid, String user) {
+        this.userid = userid;
+        this.user = user;
+    }
 
-  public String getuserid() {
-    return this.userid;}
+    @Override public String getUserid() {
+        return userid;
+    }
 
-  public void setuserid(String userid) {
-    this.userid = userid;}
+    @Override public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    @Override public String[] getVcards() {
+        return vcards;
+    }
+
+    @Override public void setVcards(String[] vcards) {
+        this.vcards = vcards;
+    }
 }

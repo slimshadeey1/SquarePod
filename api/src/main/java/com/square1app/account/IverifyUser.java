@@ -1,9 +1,10 @@
 package com.square1app.account;
 
-import java.lang.String;
+/**
+ * Created by benbyers on 2/27/16.
+ */
+public interface IverifyUser {
+    String getusername();
 
-interface IverifyUser {
-  String getusername();
-
-  void setusername(String username);
+    void setusername(String username);
 }

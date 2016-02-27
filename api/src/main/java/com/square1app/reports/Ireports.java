@@ -1,8 +1,8 @@
 package com.square1app.reports;
 
-import java.lang.String;
 import javax.inject.Named;
 
 interface Ireports {
-  Ireport report(@Named("userid") String userid);
+    Ireport report(@Named("ownerid") String ownerid, String authtoken, String date,
+        String targetid);
 }

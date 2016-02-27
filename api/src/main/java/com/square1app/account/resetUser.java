@@ -1,17 +1,17 @@
 package com.square1app.account;
 
-import java.lang.Override;
-import java.lang.String;
-
 class resetUser implements IresetUser {
-  private String username;
+    private String ownerid;
 
-  resetUser(String username) {
-    this.username = username;}
+    resetUser(String ownerid) {
+        this.ownerid = ownerid;
+    }
 
-  public String getusername() {
-    return this.username;}
+    @Override public String getOwnerid() {
+        return this.ownerid;
+    }
 
-  public void setusername(String username) {
-    this.username = username;}
+    @Override public void setOwnerid(String ownerid) {
+        this.ownerid = ownerid;
+    }
 }

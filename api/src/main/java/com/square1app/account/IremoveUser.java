@@ -1,4 +1,7 @@
 package com.square1app.account;
 
-interface IremoveUser {
+/**
+ * Created by benbyers on 2/27/16.
+ */
+public interface IremoveUser {
 }

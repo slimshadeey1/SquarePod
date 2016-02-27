@@ -2,27 +2,27 @@ package com.square1app.blocks;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiNamespace;
-import java.lang.Override;
+
+import javax.inject.Named;
 
 @Api(
     name = "blocks",
     version = "v1",
     description = "Square 1 API",
-    namespace = @ApiNamespace(ownerDomain = "Square1app.com", ownerName = "Square 1", packagePath = "com.Square1app.blocks")
-)
+    namespace = @ApiNamespace(ownerDomain = "Square1app.com", ownerName = "Square 1", packagePath = "com.Square1app"))
 class blocks implements Iblocks {
 
-  public Iblock block() {
-    return block();
-  }
+    @Override public Iblock block(@Named("ownerid")String ownerid, @Named("targetid")String targetID, @Named("token")String token) {
+        return new block();
+    }
 
 
-  public Iunblock unblock() {
-    return unblock();
-  }
+    @Override public Iunblock unblock(@Named("ownerid")String ownerid, @Named("targetid")String targetID, @Named("token")String token) {
+        return new unblock();
+    }
 
 
-  public Ilist list() {
-    return list();
-  }
+    @Override public Ilist list(@Named("ownerid")String ownerid, @Named("targetid")String targetID, @Named("token")String token) {
+        return new list();
+    }
 }

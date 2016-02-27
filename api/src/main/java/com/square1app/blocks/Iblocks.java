@@ -1,9 +1,12 @@
 package com.square1app.blocks;
 
-interface Iblocks {
-  Iblock block();
+/**
+ * Created by benbyers on 2/27/16.
+ */
+public interface Iblocks {
+    Iblock block(String ownerid, String targetID, String token);
 
-  Iunblock unblock();
+    Iunblock unblock(String ownerid, String targetID, String token);
 
-  Ilist list();
+    Ilist list(String ownerid, String targetID, String token);
 }
