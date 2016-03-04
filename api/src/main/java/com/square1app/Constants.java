@@ -10,4 +10,7 @@ public class Constants {
         "774645035750-t5tdsdorpioabv71md9k38ko3im2upg4.apps.googleusercontent.com	";
 
     public static final String EMAIL_SCOPE = "https://www.googleapis.com/auth/userinfo.email";
+
+    public static final String API_EXPLORER_CLIENT_ID = com.google.api.server.spi.Constant.API_EXPLORER_CLIENT_ID;
+
 }

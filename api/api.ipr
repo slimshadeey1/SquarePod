@@ -22,12 +22,12 @@
     </artifact>
     <artifact type="war" name="api:war">
       <output-path>$PROJECT_DIR$/target</output-path>
-      <root id="archive" name="api-1.0-SNAPSHOT.war">
+      <root id="archive" name="api-1.1-SNAPSHOT.war">
         <element id="artifact" artifact-name="api:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="api:war exploded">
-      <output-path>$PROJECT_DIR$/target/api-1.0-SNAPSHOT</output-path>
+      <output-path>$PROJECT_DIR$/target/api-1.1-SNAPSHOT</output-path>
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
@@ -55,7 +55,7 @@
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/target/api-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/target/api-1.1-SNAPSHOT/META-INF/MANIFEST.MF" />
         </element>
         <element id="javaee-facet-resources" facet="api/web/api" />
       </root>

@@ -2,12 +2,15 @@ package com.square1app.account;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiNamespace;
+import com.square1app.Constants;
 
 import javax.inject.Named;
 
 @Api(
     name = "account",
     version = "v1",
+    clientIds = {Constants.API_EXPLORER_CLIENT_ID},
+
     description = "Square 1 API",
     namespace = @ApiNamespace(ownerDomain = "Square1app.com", ownerName = "Square 1", packagePath = "com.Square1app"))
 class account implements Iaccount {
